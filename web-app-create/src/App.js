@@ -7,7 +7,27 @@ function App() {
     'Angular dla początkujących',
     'Kurs Django',
   ])
-  const [numer, setNumer] = useState(0)
+
+  const [nameAndSurname, setNameAndSurname] = useState('')
+  const [courseNumber, setCourseNumber] = useState(0)
+
+  const onNameAndSurnameChange = (event) => {
+    setNameAndSurname(event.target.value)
+  }
+
+  const onCourseNumberChange = (event) => {
+    setCourseNumber(event.target.value)
+  }
+  
+  const onSubmit = (event) => {
+    event.preventDefault()
+    console.log(nameAndSurname)
+    if (courses[courseNumber-1]) {
+      console.log(courses[courseNumber-1])
+    } else {
+      console.log("Nieprawidłowy numer kursu")
+    }
+  }
 
   return (
     <div>
@@ -19,16 +39,23 @@ function App() {
           </li>
         ))}
       </ol>
-      <form> 
+      <form onSubmit={onSubmit}> 
         <div className="form-group"> 
           <label htmlFor="imieNazw">Imie i nazwisko</label> 
-          <input type="text" className="form-control" id="imieNazw" /> 
+          <input onChange={onNameAndSurnameChange}
+          type="text" 
+          className="form-control" 
+          id="imieNazw" /> 
         </div> 
         <div className="form-group"> 
-          <label>Numer kursu:</label> 
-          <input type="number" className="form-control" id="numer" /> 
+          <label htmlFor="numer">Numer kursu:</label> 
+          <input 
+          onChange={onCourseNumberChange}
+          type="number" 
+          className="form-control" 
+          id="numer" /> 
         </div> 
-        <button type="button" className="btn btn-primary">
+        <button type="submit" className="btn btn-primary">
         Zapisz do kursu
         </button>
       </form>
