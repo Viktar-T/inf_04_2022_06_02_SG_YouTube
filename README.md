@@ -38,6 +38,7 @@
 1. **YouTube Tutorial**: [Create React App Tutorial](https://www.youtube.com/watch?v=COtrqVRwO7I)
 2. **GitHub Examples**: [inf_04_2022_06_02_SG_YouTube](https://github.com/Viktar-T/inf_04_2022_06_02_SG_YouTube); 
    [INF.04-rozwiazania-TEB](https://github.com/Viktar-T/INF.04-rozwiazania)
+3. **YouTube Channel**: [Nauka Od Zera. Arkusze](https://www.youtube.com/@NaukaOdZera)
 
 ## Useful Links
 1. **HTML**: [w3schools HTML Guide](https://www.w3schools.com/html/default.asp)
